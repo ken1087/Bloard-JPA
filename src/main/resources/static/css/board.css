@@ -1,0 +1,13 @@
+@import url(base.css);
+
+.container{
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.searchBox{
+	width: 40%;
+	text-align: right;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+}

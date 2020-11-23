@@ -1,1 +1,27 @@
-
+server:
+  port: 8050
+  servlet:
+    context-path: /
+# 5.7이하는 아래의 코드를 사용할것!!!!!
+# com.mysql.jdbc.Driver
+# jdbc:mysql://localhost:3306/cosmysql
+# 다음아래 부터는 6.0이상버전
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: dlsdlwkd12.
+    
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
